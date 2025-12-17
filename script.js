@@ -1,12 +1,5 @@
-const countdownTarget = (() => {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-    const target = new Date(`${currentYear}-12-17T00:00:00`);
-    if (target < now) {
-        target.setFullYear(currentYear + 1);
-    }
-    return target;
-})();
+// Countdown target fixed to Jan 15, 2026
+const countdownTarget = new Date('2026-01-15T00:00:00');
 
 const countdownElements = {
     days: document.getElementById('days'),
