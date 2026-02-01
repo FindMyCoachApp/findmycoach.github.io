@@ -149,3 +149,100 @@ if (document.readyState === 'loading') {
     initMobileMenu();
 }
 
+// FAQ Accordion Functionality
+function initFAQ() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
+
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            faqQuestions.forEach(q => {
+                q.setAttribute('aria-expanded', 'false');
+            });
+
+            // Open clicked item if it wasn't active
+            if (!isActive || !isExpanded) {
+                faqItem.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+}
+
+// Initialize FAQ on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFAQ);
+} else {
+    initFAQ();
+}
+
+// Why Choose Us Slider Functionality
+function initWhyChooseSlider() {
+    const slides = document.querySelectorAll('.why-choose-slide');
+    const indicators = document.querySelectorAll('.slide-indicator');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+
+    if (slides.length === 0) return;
+
+    function showSlide(index) {
+        // Remove active class from all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Add active class to current slide and indicator
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+
+    function prevSlide() {
+        const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prevIndex);
+    }
+
+    // Event listeners for navigation buttons
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+}
+
+// Initialize slider on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWhyChooseSlider);
+} else {
+    initWhyChooseSlider();
+}

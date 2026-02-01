@@ -13,9 +13,13 @@
   <meta name="theme-color" content="#007aff">
   <meta name="mobile-web-app-capable" content="yes">
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+
   <!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" href="images/logo/findmycoachlogo.jpg">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/logo/findmycoachlogo.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 
   <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
@@ -31,16 +35,56 @@
       <img class="logo-img" src="images/logo/findmycoachlogo.jpg" alt="Find My Coach logo">
       <div>
         <p class="brand-name">Find My Coach</p>
-        <p class="brand-tagline">Coaching Made Easy</p>
+        <p class="brand-tagline">Mobile</p>
       </div>
     </div>
     <nav class="main-nav" id="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-ghost" href="signup.html">Join Waitlist</a>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#feature">Feature</a>
+      <a href="#showcase">Showcase</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <div class="header-social">
+      <a href="signup.html" aria-label="Join Waitlist" class="social-header-icon waitlist-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <line x1="19" y1="8" x2="19" y2="14"></line>
+          <line x1="22" y1="11" x2="16" y2="11"></line>
+        </svg>
+      </a>
+      <a href="mailto:findmycoach.contact@gmail.com" aria-label="Email" class="social-header-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 3.6-8 5.1-8-5.1V6l8 5 8-5v1.6z" />
+        </svg>
+      </a>
+      <a href="https://wa.me/60178708065" target="_blank" rel="noopener" aria-label="WhatsApp"
+        class="social-header-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/findmycoach.official/" target="_blank" rel="noopener" aria-label="Instagram"
+        class="social-header-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/mikolajgross/" target="_blank" rel="noopener" aria-label="LinkedIn"
+        class="social-header-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+      </a>
+    </div>
     <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span>
       <span></span>
@@ -50,93 +94,300 @@
 
   <main>
     <section class="hero" id="hero">
-      <div class="hero-text">
-        <h1>Find the Perfect Coach Near You</h1>
-        <p class="hero-subtext">Find My Coach is the mobile app that pairs athletes with tennis, swimming,
-          badminton, and multi-sport coaches nearby. Compare experience, reviews, and rates, then lock in a session
-          instantly.</p>
-        <div class="countdown" aria-live="polite">
-          <div><span id="days">00</span><small>Days</small></div>
-          <div><span id="hours">00</span><small>Hours</small></div>
-          <div><span id="minutes">00</span><small>Minutes</small></div>
-          <div><span id="seconds">00</span><small>Seconds</small></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Find the Perfect <span class="highlight">Coach Near You</span></h1>
+          <p class="hero-subtext">Find My Coach is the mobile app that pairs athletes with tennis, swimming,
+            badminton, and multi-sport coaches nearby. Compare experience, reviews, and rates, then lock in a session
+            instantly.</p>
+          <div class="app-download-buttons">
+            <a href="signup.html" class="btn btn-primary register-btn">
+              Sign Up Today
+            </a>
+          </div>
         </div>
-        <a class="btn btn-primary" href="signup.html">Join the Waitlist</a>
-      </div>
-      <div class="hero-preview">
-        <figure class="device-card">
-          <img src="images/App-Photo-1.png" alt="Coach discovery screen mockup">
-          <figcaption>Take your game to the next level with Find My Coach</figcaption>
-        </figure>
-        <figure class="device-card">
-          <img src="images/App-Photo-2.png" alt="Messaging and booking mockup">
-          <figcaption>Book sessions and chat without leaving the app.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div>
-        <p class="eyebrow">About Find My Coach</p>
-        <h2>What is Find My Coach?</h2>
-        <p>Find My Coach is a mobile app built to connect athletes with professional sports coaches in their area.
-          Browse detailed profiles, review experience and rates, and book training sessions in seconds—whether you’re
-          leveling up tennis serves, refining swim technique, or mastering badminton footwork.</p>
-        <p>The platform also empowers coaches to grow their sports business. Showcase expertise, manage bookings, and
-          communicate with athletes who are actively searching for specialized guidance—all from one streamlined
-          workspace.</p>
-      </div>
-      <a class="btn btn-outline" href="about.html">Learn more about us</a>
-    </section>
-
-    <section class="benefits" aria-label="Benefits for athletes and coaches">
-      <div class="section-heading">
-        <p class="eyebrow">Benefits</p>
-        <h2>Built for athletes and coaches</h2>
-      </div>
-      <div class="benefit-grid">
-        <article class="benefit-card">
-          <h3>Athletes</h3>
-          <p>Discover elite instruction tailored to your goals across a wide variety of sports.</p>
-          <ul>
-            <li>Connect with local coaches in minutes</li>
-            <li>Browse a wide variety of sports and specialties</li>
-            <li>Instant booking and in-app messaging</li>
-          </ul>
-        </article>
-        <article class="benefit-card">
-          <h3>Coaches</h3>
-          <p>Grow your client base while the app handles scheduling, visibility, and communication.</p>
-          <ul>
-            <li>In-app communication keeps conversations organized</li>
-            <li>Reach a greater customer database of motivated athletes</li>
-            <li>Schedule and booking management in one dashboard</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="social-proof">
-      <div class="section-heading">
-        <p class="eyebrow">Join the Community</p>
-        <h2>Already <span id="waitlist-count">500+</span> athletes and coaches are waiting</h2>
-        <p class="subtext">Be part of the movement transforming how athletes find expert coaching</p>
-      </div>
-      <div class="proof-stats">
-        <div class="stat-card">
-          <div class="stat-number">+50</div>
-          <div class="stat-label">Coaches</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">+20</div>
-          <div class="stat-label">Sports</div>
+        <div class="hero-visual">
+          <div class="phone-mockup phone-mockup-hero">
+            <div class="phone-screen">
+              <img src="images/Modern Smartphone With Hand Mockup.png" alt="Find My Coach app interface">
+            </div>
+            <div class="phone-mockup-bg"></div>
+          </div>
+          <div class="geometric-shapes">
+            <div class="shape shape-circle"></div>
+            <div class="shape shape-square"></div>
+            <div class="shape shape-triangle"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="app-preview">
+    <section class="statistics">
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="stat-number">+50</div>
+        <div class="stat-label">Coaches already signed up</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <div class="stat-number">+10</div>
+        <div class="stat-label">Sports</div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-wrapper">
+        <div class="section-heading">
+          <p class="eyebrow">About Us</p>
+          <h2>Connecting Athletes with Coaches</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Find My Coach is a Kuala Lumpur–based sports platform built to connect athletes with independent coaches
+              through a simple, flexible mobile app. We help athletes find trusted local coaches with transparent
+              reviews and easy booking, while giving coaches the visibility, control, and freedom to manage their
+              coaching business without contracts or commission fees.</p>
+            <p>Our mission is to make quality coaching more accessible and to support the growth of local sports
+              communities. Starting with tennis, badminton, and swimming, Find My Coach is launching soon and aims to
+              become the go-to platform for coaching in Kuala Lumpur before expanding to new sports and locations.</p>
+          </div>
+        </div>
+        <div class="why-choose-us-section">
+          <div class="why-choose-us-wrapper">
+            <div class="why-choose-us-slider">
+              <!-- Coaches Slide -->
+              <div class="why-choose-slide active" data-slide="coaches">
+                <div class="why-choose-content">
+                  <div class="why-choose-left">
+                    <h2 class="why-choose-title">Why Choose Us</h2>
+                    <p class="why-choose-description">Find My Coach empowers coaches to grow their business
+                      independently. We provide the tools and platform you need to connect with athletes, manage your
+                      schedule, and build your reputation—all while keeping 100% of your earnings.</p>
+                    <div class="why-choose-image-grid">
+                      <div class="image-grid-item">
+                        <img src="images/tennis-match.jpg" alt="Tennis coaching">
+                      </div>
+                      <div class="image-grid-item">
+                        <img src="images/badminton-match.jpg" alt="Badminton coaching">
+                      </div>
+                      <div class="image-grid-item">
+                        <img src="images/swimming-coach.jpg" alt="Swimming coaching">
+                      </div>
+                      <div class="image-grid-item">
+                        <img src="images/padel-match.jpg" alt="Padel coaching">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="why-choose-right">
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">01</div>
+                      <div class="benefit-content">
+                        <h3>Increased Visibility</h3>
+                        <p>Increased visibility without spending on heavy marketing</p>
+                      </div>
+                    </div>
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">02</div>
+                      <div class="benefit-content">
+                        <h3>Full Control</h3>
+                        <p>Full control over pricing, availability, and schedule</p>
+                      </div>
+                    </div>
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">03</div>
+                      <div class="benefit-content">
+                        <h3>Zero Commission</h3>
+                        <p>0% commission on earnings</p>
+                      </div>
+                    </div>
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">04</div>
+                      <div class="benefit-content">
+                        <h3>Centralized Management</h3>
+                        <p>Centralized booking and client management</p>
+                      </div>
+                    </div>
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">05</div>
+                      <div class="benefit-content">
+                        <h3>Build Reputation</h3>
+                        <p>Ability to build reputation through reviews</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Athletes Slide -->
+              <div class="why-choose-slide" data-slide="athletes">
+                <div class="why-choose-content">
+                  <div class="why-choose-left">
+                    <h2 class="why-choose-title">Why Choose Us</h2>
+                    <p class="why-choose-description">Find My Coach makes it easy to discover and connect with trusted
+                      local coaches. Browse profiles, read reviews, compare prices, and book sessions—all in one simple,
+                      user-friendly platform designed for athletes.</p>
+                    <div class="why-choose-image-grid">
+                      <div class="image-grid-item">
+                        <img src="images/tennis-racket.jpg" alt="Tennis training">
+                      </div>
+                      <div class="image-grid-item">
+                        <img src="images/swimming-players.jpg" alt="Swimming training">
+                      </div>
+                      <div class="image-grid-item">
+                        <img src="images/pickleball-match.jpg" alt="Pickleball training">
+                      </div>
+                      <div class="image-grid-item">
+                        <img src="images/padel-player.jpg" alt="Padel training">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="why-choose-right">
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">01</div>
+                      <div class="benefit-content">
+                        <h3>Easy Access</h3>
+                        <p>Easy access to trusted local coaches in one platform</p>
+                      </div>
+                    </div>
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">02</div>
+                      <div class="benefit-content">
+                        <h3>Smart Filters</h3>
+                        <p>Filters by sport, experience, and price for better choice</p>
+                      </div>
+                    </div>
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">03</div>
+                      <div class="benefit-content">
+                        <h3>Transparent Reviews</h3>
+                        <p>Transparent ratings and reviews to build confidence</p>
+                      </div>
+                    </div>
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">04</div>
+                      <div class="benefit-content">
+                        <h3>Simple Booking</h3>
+                        <p>Simple booking and scheduling process</p>
+                      </div>
+                    </div>
+                    <div class="benefit-card-numbered">
+                      <div class="benefit-number">05</div>
+                      <div class="benefit-content">
+                        <h3>Direct Communication</h3>
+                        <p>Direct in-app communication with coaches</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="why-choose-navigation">
+              <button class="slide-nav-btn prev-btn" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="slide-indicators">
+                <button class="slide-indicator active" data-slide="coaches" aria-label="View coaches benefits"></button>
+                <button class="slide-indicator" data-slide="athletes" aria-label="View athletes benefits"></button>
+              </div>
+              <button class="slide-nav-btn next-btn" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" id="feature">
+      <div class="feature-content">
+        <div class="feature-text">
+          <h2 class="section-title">Feature</h2>
+          <div class="feature-item">
+            <div class="feature-bullet"></div>
+            <h3>Scheduling and client management</h3>
+            <p>Efficiently manage your coaching schedule and client roster all in one place. Book sessions, track
+              appointments, and organize your athlete database with ease.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-bullet"></div>
+            <h3>Growing your profile</h3>
+            <p>Showcase your expertise, experience, and achievements to attract more athletes. Build your reputation and
+              expand your coaching business with a professional profile.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-bullet"></div>
+            <h3>0% Commission Rate</h3>
+            <p>Find My Coach is the fastest growing sport community in KL. Coaches have access to flexible locations, no
+              contracts, and a 0% commission subscription model.</p>
+          </div>
+          <div class="feature-cta">
+            <a href="signup.html" class="btn btn-primary">Sign Up Today</a>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="phone-mockup phone-mockup-feature">
+            <div class="phone-screen">
+              <img src="images/Minimalist_Mockup_Product_Features_Instagram_Post__1_-removebg-preview.png"
+                alt="Find My Coach features">
+            </div>
+            <div class="phone-mockup-bg"></div>
+          </div>
+          <div class="geometric-shapes feature-shapes">
+            <div class="shape shape-dots"></div>
+            <div class="shape shape-ring"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section-light">
+      <div class="content-section-wrapper">
+        <div class="content-visual">
+          <div class="phone-mockup phone-mockup-content">
+            <div class="phone-screen">
+              <img src="images/_Hand_Holding_Phone_Mockup_Your_Story-removebg-preview.png"
+                alt="Find My Coach app interface">
+            </div>
+            <div class="phone-mockup-bg"></div>
+          </div>
+          <div class="geometric-shapes content-shapes">
+            <div class="shape shape-circle-light"></div>
+            <div class="shape shape-dots-light"></div>
+            <div class="shape shape-triangle-light"></div>
+          </div>
+        </div>
+        <div class="content-text">
+          <h2>Messaging all in one app</h2>
+          <p>Stay connected with athletes through our built-in messaging system. Communicate about training plans,
+            session details, and build lasting coaching relationships.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="showcase">
       <div class="section-heading">
-        <p class="eyebrow">Product Preview</p>
+        <p class="eyebrow">Showcase</p>
         <h2>See the experience</h2>
       </div>
       <div class="preview-grid">
@@ -159,72 +410,245 @@
       </div>
     </section>
 
-    <section class="early-access">
-      <div class="early-access-content">
-        <p class="eyebrow">Limited Early Access</p>
-        <h2>Get exclusive perks as an early member</h2>
-        <ul class="perks-list">
-          <li>✅ Free premium features for first 3 months</li>
-          <li>✅ Priority access when we launch</li>
-          <li>✅ Exclusive training tips and resources</li>
-          <li>✅ Direct input on app features</li>
-        </ul>
-        <a class="btn btn-primary btn-large" href="signup.html">Reserve Your Spot Now</a>
-        <p class="urgency-text">Only <strong>100 spots</strong> left for early access!</p>
+    <section class="content-section-dark">
+      <div class="content-section-dark-wrapper">
+        <div class="content-dark-text">
+          <h2>See Find My Coach in Action</h2>
+          <div class="content-bullet-dark"></div>
+          <p>Watch how athletes and coaches connect, book sessions, and build lasting training relationships through our
+            platform.</p>
+        </div>
+        <div class="video-card">
+          <div class="video-card-header">
+            <h3>Watch Video</h3>
+          </div>
+          <div class="video-player">
+            <video controls poster="" class="video-element">
+              <source src="videos/Find My Coach Service Promotion Mobile Video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="geometric-shapes dark-shapes">
+          <div class="shape shape-ring-dark"></div>
+          <div class="shape shape-circle-dark"></div>
+        </div>
       </div>
     </section>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-wrapper">
+        <div class="faq-left">
+          <h2 class="faq-title">FAQ</h2>
+          <div class="faq-underline"></div>
+          <p class="faq-intro">Everything you need to know about Find My Coach and how it works for both athletes and
+            coaches.</p>
+          <div class="faq-image">
+            <img src="images/faq.png" alt="Find My Coach FAQ illustration">
+          </div>
+          <div class="faq-decoration">
+            <div class="faq-shape faq-megaphone"></div>
+            <div class="faq-shape faq-triangle"></div>
+            <div class="faq-shape faq-ring"></div>
+            <div class="faq-shape faq-dots"></div>
+          </div>
+        </div>
+        <div class="faq-right">
+          <div class="faq-container">
+            <div class="faq-item active">
+              <button class="faq-question" aria-expanded="true">
+                <span>What is Find My Coach?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>Find My Coach is a mobile app that connects athletes with professional sports coaches in their area.
+                  Whether you're looking for tennis, swimming, badminton, or other sports coaching, you can browse
+                  profiles, compare rates, read reviews, and book sessions instantly.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>When will the app launch?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>We're targeting a launch in the middle of 2026. Join our waitlist to be notified as soon as we go
+                  live!</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What sports are supported?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>We support 10+ sports including tennis, swimming, badminton, basketball, soccer, volleyball, and
+                  more. We're constantly adding new sports based on demand!</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do coaches sign up?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>Coaches can join our waitlist now! Once we launch, you'll be able to create a profile, showcase your
+                  expertise, set your rates, and start connecting with athletes in your area.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Is there a fee to use the app?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>The app is free for athletes to download and browse coaches. Coaches pay a small monthly fee to have
+                  access to the app.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Why Should I sign up for the Waitlist?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>Coaches get a 3 free month trial to try out the app. Also, everyone that registers will be notified
+                  as soon as we launch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-section-wrapper">
+        <div class="contact-header">
+          <p class="eyebrow">Let's connect</p>
+          <h2>Reach the Find My Coach team</h2>
+          <p class="contact-intro">We're here to answer questions from athletes, coaches, and partners. Get in touch
+            with us through any of the channels below.</p>
+        </div>
+        <div class="contact-cards">
+          <a class="contact-card-modern" href="mailto:findmycoach.contact@gmail.com">
+            <div class="contact-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <h3>Email us</h3>
+            <p>findmycoach.contact@gmail.com</p>
+          </a>
+          <a class="contact-card-modern" href="https://www.instagram.com/findmycoach.official/" target="_blank"
+            rel="noopener">
+            <div class="contact-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+              </svg>
+            </div>
+            <h3>DM on Instagram</h3>
+            <p>@findmycoach.official</p>
+          </a>
+          <a class="contact-card-modern" href="https://wa.me/60178708065" target="_blank" rel="noopener">
+            <div class="contact-icon-wrapper">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </div>
+            <h3>WhatsApp us</h3>
+            <p>+60 17-870 8065</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-brand">
-        <img class="logo-img" src="images/logo/findmycoachlogo.jpg" alt="Find My Coach logo">
-        <p>Your app to discover expert coaches, manage bookings, and elevate performance across 10+ sports.</p>
+        <div class="footer-logo-wrapper">
+          <img class="footer-logo" src="images/logo/findmycoachlogo.jpg" alt="Find My Coach logo">
+        </div>
+        <p class="footer-tagline">Mobile</p>
+        <p class="footer-copyright">© Find My Coach 2026</p>
       </div>
-      <div class="footer-columns">
-        <div>
-          <p class="footer-heading">Explore</p>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
+      <div class="footer-nav-columns">
+        <div class="footer-nav-column">
+          <p class="footer-nav-heading">NAVIGATION</p>
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#feature">Feature</a>
+          <a href="#showcase">Showcase</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-nav-column">
+          <p class="footer-nav-heading">PAGES</p>
+          <a href="index.html">Homepage</a>
+          <a href="about.html">About Us</a>
+          <a href="faq.html">FAQ Page</a>
           <a href="signup.html">Join Waitlist</a>
         </div>
-        <div class="footer-connect">
-          <p class="footer-heading">Connect</p>
-          <a class="footer-link" href="mailto:findmycoach.contact@gmail.com">
-            <svg class="contact-icon gmail-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <div class="footer-nav-column">
+          <p class="footer-nav-heading">LEGAL</p>
+          <a href="https://www.termsfeed.com/live/9dfcdae5-3102-4b55-a3c2-f654b8c270d8" target="_blank"
+            rel="noopener">Privacy Policy</a>
+          <a href="tos.html">Terms of Service</a>
+          <a href="cookies.html">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a class="footer-social-icon" href="mailto:findmycoach.contact@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 3.6-8 5.1-8-5.1V6l8 5 8-5v1.6z" />
             </svg>
-            <span>findmycoach.contact@gmail.com</span>
           </a>
-          <a class="footer-link" href="https://www.instagram.com/findmycoach.official/" target="_blank" rel="noopener">
-            <svg class="contact-icon instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <a class="footer-social-icon" href="https://wa.me/60178708065" target="_blank" rel="noopener"
+            aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <path
-                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm6-3.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.25z" />
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            <span>@findmycoach.official</span>
+          </a>
+          <a class="footer-social-icon" href="https://www.instagram.com/findmycoach.official/" target="_blank"
+            rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+            </svg>
+          </a>
+          <a class="footer-social-icon" href="https://www.linkedin.com/in/mikolajgross/" target="_blank" rel="noopener"
+            aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
           </a>
         </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© Find My Coach. All rights reserved.</span>
-      <div class="social-icons">
-        <a class="social-icon" href="mailto:findmycoach.contact@gmail.com" aria-label="Email">
-          <svg class="contact-icon gmail-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 3.6-8 5.1-8-5.1V6l8 5 8-5v1.6z" />
-          </svg>
-        </a>
-        <a class="social-icon" href="https://www.instagram.com/findmycoach.official/" target="_blank" rel="noopener"
-          aria-label="Instagram">
-          <svg class="contact-icon instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm6-3.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.25z" />
-          </svg>
-        </a>
       </div>
     </div>
   </footer>
