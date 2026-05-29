@@ -1,54 +1,94 @@
 // Service Worker for Find My Coach PWA
-const CACHE_NAME = 'find-my-coach-v1';
+const CACHE_NAME = 'find-my-coach-static-v1';
+const RUNTIME_CACHE = 'find-my-coach-runtime-static-v1';
 const urlsToCache = [
   '/',
-  '/index.html',
-  '/about.html',
-  '/faq.html',
-  '/signup.html',
   '/tos.html',
   '/cookies.html',
-  '/styles.css',
-  '/script.js',
+  '/thank-you.html',
+  '/css/styles.css',
+  '/js/script.js',
+  '/manifest.json',
   '/images/logo/findmycoachlogo.jpg',
-  '/manifest.json'
+  '/favicon/android-chrome-192x192.png',
+  '/favicon/android-chrome-512x512.png'
 ];
 
-// Install event - cache resources
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        return Promise.allSettled(
+          urlsToCache.map((url) =>
+            cache.add(url).catch((err) => {
+              console.warn(`Failed to cache ${url}:`, err);
+            })
+          )
+        );
       })
+      .then(() => self.skipWaiting())
   );
 });
 
-// Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
-      })
-  );
-});
-
-// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys()
+      .then((cacheNames) =>
+        Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== CACHE_NAME && cacheName !== RUNTIME_CACHE) {
+              return caches.delete(cacheName);
+            }
+          })
+        )
+      )
+      .then(() => self.clients.claim())
   );
 });
 
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  if (url.origin !== location.origin || request.method !== 'GET') {
+    return;
+  }
+
+  if (request.destination === 'document' || request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const responseToCache = response.clone();
+          caches.open(RUNTIME_CACHE).then((cache) => {
+            cache.put(request, responseToCache);
+          });
+          return response;
+        })
+        .catch(() =>
+          caches.match(request).then((cachedResponse) => cachedResponse || caches.match('/'))
+        )
+    );
+    return;
+  }
+
+  if (
+    request.destination === 'style' ||
+    request.destination === 'script' ||
+    request.destination === 'image' ||
+    request.destination === 'font'
+  ) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response && response.status === 200) {
+            const responseToCache = response.clone();
+            caches.open(RUNTIME_CACHE).then((cache) => {
+              cache.put(request, responseToCache);
+            });
+          }
+          return response;
+        })
+        .catch(() => caches.match(request))
+    );
+  }
+});
