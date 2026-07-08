@@ -1,13 +1,15 @@
 {
   "name": "Find My Coach",
   "short_name": "Find My Coach",
-  "description": "Your app to discover expert coaches, manage bookings, and elevate performance across 10+ sports.",
-  "start_url": "index.html",
+  "description": "Find and book sports coaches in Kuala Lumpur: tennis, badminton, swimming, padel and more. 0% commission for coaches.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007aff",
   "orientation": "portrait-primary",
-  "scope": "./",
+  "scope": "/",
+  "lang": "en-MY",
+  "dir": "ltr",
   "icons": [
     {
       "src": "favicon/android-chrome-192x192.png",
@@ -35,20 +37,20 @@
   ],
   "screenshots": [
     {
-      "src": "images/App-Photo-1.png",
-      "sizes": "390x844",
+      "src": "images/app/home.png",
+      "sizes": "393x852",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "images/App-Photo-2.png",
-      "sizes": "390x844",
+      "src": "images/app/profile.png",
+      "sizes": "393x852",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "images/App-Photo-3.png",
-      "sizes": "390x844",
+      "src": "images/app/sports.png",
+      "sizes": "393x852",
       "type": "image/png",
       "form_factor": "narrow"
     }
@@ -58,7 +60,7 @@
       "name": "Join Waitlist",
       "short_name": "Sign Up",
       "description": "Join the waitlist for early access",
-      "url": "index.html#early-access",
+      "url": "/waitlist.html",
       "icons": [
         {
           "src": "favicon/android-chrome-192x192.png",
@@ -67,10 +69,10 @@
       ]
     },
     {
-      "name": "FAQ",
-      "short_name": "FAQ",
-      "description": "Frequently asked questions",
-      "url": "index.html#faq",
+      "name": "For Coaches",
+      "short_name": "Coaches",
+      "description": "Join as a sports coach in Kuala Lumpur",
+      "url": "/coaches.html",
       "icons": [
         {
           "src": "favicon/android-chrome-192x192.png",

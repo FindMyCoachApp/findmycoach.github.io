@@ -1,15 +1,50 @@
 // Service Worker for Find My Coach PWA
-const CACHE_NAME = 'find-my-coach-static-v1';
-const RUNTIME_CACHE = 'find-my-coach-runtime-static-v1';
+const CACHE_NAME = 'find-my-coach-static-v6';
+const RUNTIME_CACHE = 'find-my-coach-runtime-v6';
 const urlsToCache = [
   '/',
+  '/index.html',
+  '/ms/',
+  '/ms/index.html',
+  '/waitlist.html',
+  '/ms/waitlist.html',
+  '/coaches.html',
+  '/ms/coaches.html',
+  '/news/',
+  '/news/index.html',
+  '/news/launching-mid-2026-in-kuala-lumpur.html',
+  '/news/padel-added-to-launch-sports.html',
+  '/news/coach-waitlist-3-month-free-trial.html',
+  '/ms/news/',
+  '/ms/news/index.html',
+  '/ms/news/launching-mid-2026-in-kuala-lumpur.html',
+  '/ms/news/padel-added-to-launch-sports.html',
+  '/ms/news/coach-waitlist-3-month-free-trial.html',
+  '/privacy.html',
+  '/ms/privacy.html',
   '/tos.html',
   '/cookies.html',
   '/thank-you.html',
+  '/ms/thank-you.html',
+  '/404.html',
   '/css/styles.css',
   '/js/script.js',
+  '/js/site-config.js',
+  '/images/og-share.jpg',
+  '/js/seo-config.js',
+  '/js/seo-schema.js',
+  '/js/news-data.js',
+  '/js/news-schema.js',
+  '/js/analytics.js',
   '/manifest.json',
+  '/robots.txt',
+  '/sitemap.xml',
   '/images/logo/findmycoachlogo.jpg',
+  '/images/phone-mockup.png',
+  '/images/app/home.png',
+  '/images/app/sports.png',
+  '/images/app/profile.png',
+  '/images/app/onboarding.png',
   '/favicon/android-chrome-192x192.png',
   '/favicon/android-chrome-512x512.png'
 ];
@@ -65,7 +100,9 @@ self.addEventListener('fetch', (event) => {
           return response;
         })
         .catch(() =>
-          caches.match(request).then((cachedResponse) => cachedResponse || caches.match('/'))
+          caches.match(request).then((cachedResponse) =>
+            cachedResponse || caches.match('/index.html') || caches.match('/')
+          )
         )
     );
     return;

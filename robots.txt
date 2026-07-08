@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Utility pages — not useful in search results
+Disallow: /thank-you.html
+Disallow: /404.html
+
+# Sitemap
+Sitemap: https://www.findmycoach.my/sitemap.xml
